@@ -1,3 +1,0 @@
-^C:\USERS\ZACKSTEIN\DOCUMENTS\STEAMWORKS_SDK\REDISTRIBUTABLE_BIN\WIN64\STEAM_API64.DLL
-call call python "../tools/copy_binaries.py" "C:/Users/zackstein/Documents/steamworks_sdk/redistributable_bin/win64/steam_api64.dll" "C:/Users/zackstein/Documents/steamworks_sdk/public/steam/lib/win64/sdkencryptedappticket64.dll" "Z:/Documents/GitHub/NewAntimatterTest/node_modules/greenworks/deps/discord_game_sdk/lib/x86_64/discord_game_sdk.dll" "Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\build\Release\greenworks-win64.node" "../lib/win64"
-if %errorlevel% neq 0 exit /b %errorlevel%
