@@ -93,6 +93,10 @@ greenworks.publishWorkshopFile = function(options, file_path, image_path, title,
       description, success_callback, error_callback);
 }
 
+greenworks.ZackTest = function(){
+  console.log("hello")
+}
+
 greenworks.updatePublishedWorkshopFile = function(options,
     published_file_handle, file_path, image_path, title, description,
     success_callback, error_callback) {
