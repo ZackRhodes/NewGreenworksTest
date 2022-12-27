@@ -110,6 +110,7 @@
         'src/api/steam_api_stats.cc',
         'src/api/steam_api_workshop.cc',
         'src/api/discord_api.cc',
+        'src/api/discord_api.h',
         'src/greenworks_api.cc',
         'src/greenworks_async_workers.cc',
         'src/greenworks_async_workers.h',
