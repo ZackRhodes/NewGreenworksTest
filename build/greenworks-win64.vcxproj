@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{34CDAFCB-26B0-514E-4E98-F7929893475C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>greenworks-win64</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\bin\;$(MSBuildProjectDirectory)\..\bin\</ExecutablePath>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.node</TargetExt>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.node</TargetExt>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)\$(ProjectName).node</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\zackstein\.electron-gyp\10.4.7\include\node;C:\Users\zackstein\.electron-gyp\10.4.7\src;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\config;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\openssl\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\uv\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\zlib;C:\Users\zackstein\.electron-gyp\10.4.7\deps\v8\include;..\deps;..\src;C:\Users\zackstein\Documents\steamworks_sdk\public;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk;..\node_modules\nan;..\deps\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=greenworks-win64;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_COMPRESS_POINTERS;V8_31BIT_SMIS_ON_64BIT_ARCH;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;_AMD64_;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;DelayImp.lib;&quot;C:\\Users\\zackstein\\.electron-gyp\\10.4.7\\x64\\node.lib&quot;;steam_api64.lib;sdkencryptedappticket64.lib;discord_game_sdk.dll.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\zackstein\Documents\steamworks_sdk\redistributable_bin\win64;C:\Users\zackstein\Documents\steamworks_sdk\public\steam\lib\win64;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk\lib\x86_64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName).node</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetExt>.node</TargetExt>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\zackstein\.electron-gyp\10.4.7\include\node;C:\Users\zackstein\.electron-gyp\10.4.7\src;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\config;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\openssl\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\uv\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\zlib;C:\Users\zackstein\.electron-gyp\10.4.7\deps\v8\include;..\deps;..\src;C:\Users\zackstein\Documents\steamworks_sdk\public;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk;..\node_modules\nan;..\deps\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=greenworks-win64;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_COMPRESS_POINTERS;V8_31BIT_SMIS_ON_64BIT_ARCH;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;_AMD64_;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;DEBUG;_DEBUG;V8_ENABLE_CHECKS;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\zackstein\.electron-gyp\10.4.7\include\node;C:\Users\zackstein\.electron-gyp\10.4.7\src;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\config;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\openssl\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\uv\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\zlib;C:\Users\zackstein\.electron-gyp\10.4.7\deps\v8\include;..\deps;..\src;C:\Users\zackstein\Documents\steamworks_sdk\public;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk;..\node_modules\nan;..\deps\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;4251;4275;4244;4267;4068;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=greenworks-win64;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_COMPRESS_POINTERS;V8_31BIT_SMIS_ON_64BIT_ARCH;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;_AMD64_;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG:INCREMENTAL %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;DelayImp.lib;&quot;C:\\Users\\zackstein\\.electron-gyp\\10.4.7\\x64\\node.lib&quot;;steam_api64.lib;sdkencryptedappticket64.lib;discord_game_sdk.dll.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\zackstein\Documents\steamworks_sdk\redistributable_bin\win64;C:\Users\zackstein\Documents\steamworks_sdk\public\steam\lib\win64;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk\lib\x86_64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/LTCG:INCREMENTAL /ignore:4199 %(AdditionalOptions)</AdditionalOptions>
+      <DelayLoadDLLs>node.exe;%(DelayLoadDLLs)</DelayLoadDLLs>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)$(ProjectName).node</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetExt>.node</TargetExt>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>C:\Users\zackstein\.electron-gyp\10.4.7\include\node;C:\Users\zackstein\.electron-gyp\10.4.7\src;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\config;C:\Users\zackstein\.electron-gyp\10.4.7\deps\openssl\openssl\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\uv\include;C:\Users\zackstein\.electron-gyp\10.4.7\deps\zlib;C:\Users\zackstein\.electron-gyp\10.4.7\deps\v8\include;..\deps;..\src;C:\Users\zackstein\Documents\steamworks_sdk\public;Z:\Documents\GitHub\NewAntimatterTest\node_modules\greenworks\deps\discord_game_sdk;..\node_modules\nan;..\deps\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=greenworks-win64;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;V8_DEPRECATION_WARNINGS;V8_IMMINENT_DEPRECATION_WARNINGS;V8_COMPRESS_POINTERS;V8_31BIT_SMIS_ON_64BIT_ARCH;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;OPENSSL_NO_PINSHARED;OPENSSL_THREADS;_AMD64_;BUILDING_NODE_EXTENSION;HOST_BINARY=&quot;node.exe&quot;;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\binding.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\api\steam_api_registry.h"/>
+    <ClInclude Include="..\src\greenworks_async_workers.h"/>
+    <ClInclude Include="..\src\greenworks_unzip.h"/>
+    <ClInclude Include="..\src\greenworks_utils.h"/>
+    <ClInclude Include="..\src\greenworks_version.h"/>
+    <ClInclude Include="..\src\greenworks_workshop_workers.h"/>
+    <ClInclude Include="..\src\greenworks_zip.h"/>
+    <ClInclude Include="..\src\steam_async_worker.h"/>
+    <ClInclude Include="..\src\steam_client.h"/>
+    <ClInclude Include="..\src\steam_event.h"/>
+    <ClInclude Include="..\src\steam_id.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\types.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\types.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\core.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\core.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\achievement_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\achievement_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\activity_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\activity_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\application_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\application_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\image_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\image_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\lobby_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\lobby_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\network_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\network_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\overlay_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\overlay_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\relationship_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\relationship_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\storage_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\storage_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\store_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\store_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\user_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\user_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\deps\discord_game_sdk\cpp\voice_manager.cpp">
+      <ObjectFileName>$(IntDir)\deps\discord_game_sdk\cpp\voice_manager.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\greenworks_api_utils.cc">
+      <ObjectFileName>$(IntDir)\src\api\greenworks_api_utils.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_achievement.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_achievement.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_auth.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_auth.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_cloud.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_cloud.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_dlc.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_dlc.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_friends.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_friends.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_inventory.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_inventory.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_matchmaking.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_matchmaking.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_settings.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_settings.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_stats.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_stats.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\steam_api_workshop.cc">
+      <ObjectFileName>$(IntDir)\src\api\steam_api_workshop.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\api\discord_api.cc">
+      <ObjectFileName>$(IntDir)\src\api\discord_api.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_api.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_api.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_async_workers.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_async_workers.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_unzip.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_unzip.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_utils.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_utils.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_workshop_workers.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_workshop_workers.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\greenworks_zip.cc">
+      <ObjectFileName>$(IntDir)\src\greenworks_zip.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\steam_async_worker.cc">
+      <ObjectFileName>$(IntDir)\src\steam_async_worker.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\steam_client.cc">
+      <ObjectFileName>$(IntDir)\src\steam_client.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\steam_event.cc">
+      <ObjectFileName>$(IntDir)\src\steam_event.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\src\steam_id.cc">
+      <ObjectFileName>$(IntDir)\src\steam_id.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\src\win_delay_load_hook.cc"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="deps\zlib\minizip.vcxproj">
+      <Project>{64DF0507-1266-75C4-755B-89BEF669C874}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="deps\zlib\zlib.vcxproj">
+      <Project>{78DFE6D2-5C6B-CA0C-BD03-E2895BEFAE9C}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>
