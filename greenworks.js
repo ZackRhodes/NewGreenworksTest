@@ -9,10 +9,10 @@ var greenworks;
 
 if (process.platform == 'darwin') {
   if (process.arch == 'x64')
-    greenworks = require(__dirname + '/lib/greenworks-osx64');
+    greenworks = require(__dirname + '/lib/osx/greenworks-osx');
 } else if (process.platform == 'win32') {
   if (process.arch == 'x64')
-    greenworks = require(__dirname + '/lib/greenworks-win64');
+    greenworks = require(__dirname + '/lib/win64/greenworks-win64');
   else if (process.arch == 'ia32')
     greenworks = require(__dirname + '/lib/greenworks-win32');
 } else if (process.platform == 'linux') {
