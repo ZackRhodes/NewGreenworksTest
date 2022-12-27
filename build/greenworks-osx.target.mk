@@ -242,7 +242,7 @@ LIBTOOLFLAGS_Release := \
 LIBS := \
 	-lsteam_api \
 	-lsdkencryptedappticket \
-	/Users/zackstein/Documents/GitHub/Backup/greenworks/deps/discord_game_sdk/lib/x86_64/discord_game_sdk.dylib
+	-Wl,-rpath,@loader_path/../../lib/discord_game_sdk.dylib
 
 $(builddir)/greenworks-osx.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(builddir)/greenworks-osx.node: LIBS := $(LIBS)

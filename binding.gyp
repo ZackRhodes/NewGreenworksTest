@@ -148,7 +148,7 @@
         ],
         'conditions': [
           ['OS=="linux" or OS=="mac"', {
-            'libraries': ['-lsteam_api', '-lsdkencryptedappticket', '<(discord_game_sdk_dir)/lib/<(discord_lib_dir)/<(lib_discord)'],
+            'libraries': ['-lsteam_api', '-lsdkencryptedappticket', '-Wl,-rpath,@loader_path/../../lib/discord_game_sdk.dylib'],
           }],
           ['OS=="win"', {
             'libraries': ['-l<(lib_steam)', '-l<(lib_encryptedappticket)', '-l<(lib_discord)'],
