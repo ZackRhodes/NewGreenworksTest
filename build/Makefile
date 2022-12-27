@@ -342,7 +342,7 @@ endif
 
 quiet_cmd_regen_makefile = ACTION Regenerating $@
 cmd_regen_makefile = cd $(srcdir); /usr/local/lib/node_modules/node-gyp/gyp/gyp_main.py -fmake --ignore-environment "-Dlibrary=shared_library" "-Dvisibility=default" "-Dnode_root_dir=/Users/zackstein/Library/Caches/node-gyp/16.14.2" "-Dnode_gyp_dir=/usr/local/lib/node_modules/node-gyp" "-Dnode_lib_file=/Users/zackstein/Library/Caches/node-gyp/16.14.2/<(target_arch)/node.lib" "-Dmodule_root_dir=/Users/zackstein/Documents/GitHub/Backup/greenworks" "-Dnode_engine=v8" "--depth=." "-Goutput_dir=." "--generator-output=build" -I/Users/zackstein/Documents/GitHub/Backup/greenworks/build/config.gypi -I/usr/local/lib/node_modules/node-gyp/addon.gypi -I/Users/zackstein/Library/Caches/node-gyp/16.14.2/include/node/common.gypi "--toplevel-dir=." binding.gyp
-Makefile: $(srcdir)/binding.gyp $(srcdir)/deps/zlib/zlib.gyp $(srcdir)/../../../../../../usr/local/lib/node_modules/node-gyp/addon.gypi $(srcdir)/build/config.gypi $(srcdir)/../../../../Library/Caches/node-gyp/16.14.2/include/node/common.gypi
+Makefile: $(srcdir)/binding.gyp $(srcdir)/../../../../Library/Caches/node-gyp/16.14.2/include/node/common.gypi $(srcdir)/deps/zlib/zlib.gyp $(srcdir)/build/config.gypi $(srcdir)/../../../../../../usr/local/lib/node_modules/node-gyp/addon.gypi
 	$(call do_cmd,regen_makefile)
 
 # "all" is a concatenation of the "all" targets from all the included
