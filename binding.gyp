@@ -1,6 +1,6 @@
 {
   "variables": {
-    "steamworks_sdk_dir": "sdk",  // Updated to reflect the new SDK location
+    "steamworks_sdk_dir": "sdk",  // Ensure this matches the root directory of your SDK
     "discord_game_sdk_dir": "<!(node tools/discord_game_sdk_dir.js)"
   },
 
@@ -11,8 +11,8 @@
           "variables": {
             "target_dir": "lib/win32",
             "project_name": "greenworks-win32",
-            "redist_bin_dir": "redistributable_bin/win32",  // Updated to reflect the SDK directory structure
-            "public_lib_dir": "public/steam/lib/win32",  // Updated to reflect the SDK directory structure
+            "redist_bin_dir": "redistributable_bin/win32",
+            "public_lib_dir": "sdk/public/steam/lib/win32",  // Corrected path for the SDK
             "discord_lib_dir": "x86",
             "lib_steam": "steam_api.lib",
             "lib_encryptedappticket": "sdkencryptedappticket.lib",
@@ -26,8 +26,8 @@
           "variables": {
             "target_dir": "lib/win64",
             "project_name": "greenworks-win64",
-            "redist_bin_dir": "redistributable_bin/win64",  // Updated to reflect the SDK directory structure
-            "public_lib_dir": "public/steam/lib/win64",  // Updated to reflect the SDK directory structure
+            "redist_bin_dir": "redistributable_bin/win64",
+            "public_lib_dir": "sdk/public/steam/lib/win64",  // Corrected path for the SDK
             "discord_lib_dir": "x86_64",
             "lib_steam": "steam_api64.lib",
             "lib_encryptedappticket": "sdkencryptedappticket64.lib",
@@ -43,8 +43,8 @@
       "variables": {
         "target_dir": "lib/osx",
         "project_name": "greenworks-osx",
-        "redist_bin_dir": "redistributable_bin/osx",  // Updated to reflect the SDK directory structure
-        "public_lib_dir": "public/steam/lib/osx",  // Updated to reflect the SDK directory structure
+        "redist_bin_dir": "redistributable_bin/osx",
+        "public_lib_dir": "sdk/public/steam/lib/osx",  // Corrected path for the SDK
         "discord_lib_dir": "x86_64",
         "lib_steam": "libsteam_api.dylib",
         "lib_encryptedappticket": "libsdkencryptedappticket.dylib",
@@ -63,16 +63,16 @@
           "variables": {
             "target_dir": "lib/linux32",
             "project_name": "greenworks-linux32",
-            "redist_bin_dir": "redistributable_bin/linux32",  // Updated to reflect the SDK directory structure
-            "public_lib_dir": "public/steam/lib/linux32"  // Updated to reflect the SDK directory structure
+            "redist_bin_dir": "redistributable_bin/linux32",
+            "public_lib_dir": "sdk/public/steam/lib/linux32"  // Corrected path for the SDK
           }
         }],
         ["target_arch=='x64'", {
           "variables": {
             "target_dir": "lib/linux64",
             "project_name": "greenworks-linux64",
-            "redist_bin_dir": "redistributable_bin/linux64",  // Updated to reflect the SDK directory structure
-            "public_lib_dir": "public/steam/lib/linux64"  // Updated to reflect the SDK directory structure
+            "redist_bin_dir": "redistributable_bin/linux64",
+            "public_lib_dir": "sdk/public/steam/lib/linux64"  // Corrected path for the SDK
           }
         }]
       ]
@@ -135,15 +135,15 @@
       "include_dirs": [
         "deps",
         "src",
-        "sdk/public",  // Updated path for the Steamworks SDK headers
+        "sdk/public/steam",  // Updated path for Steam SDK headers
         "<(discord_game_sdk_dir)",
         "<!(node -e \"require('nan')\")"
       ],
       "dependencies": [ "deps/zlib/zlib.gyp:minizip" ],
       "link_settings": {
         "library_dirs": [
-          "sdk/redistributable_bin/<(redist_bin_dir)",  // Updated path for the Steamworks SDK libraries
-          "sdk/public/steam/lib/<(public_lib_dir)",  // Updated path for the Steamworks SDK libraries
+          "sdk/redistributable_bin/<(redist_bin_dir)",
+          "sdk/public/steam/lib/<(public_lib_dir)",
           "<(discord_game_sdk_dir)/lib/<(discord_lib_dir)"
         ],
         "conditions": [
